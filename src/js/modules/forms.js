@@ -30,6 +30,12 @@ const forms = (state) => {
         });
     };
 
+    const closeForm = () => {
+        document.querySelectorAll('[data-modal]').forEach(item => {
+            item.style.display = 'none';
+        });
+    };
+
     form.forEach(item => {
         item.addEventListener('submit', (e) => {
             e.preventDefault();
@@ -55,10 +61,16 @@ const forms = (state) => {
                     clearInputs();
                     setTimeout(() => {
                         statusMessage.remove();
+                        closeForm();
                     }, 5000);
+                    
+                        
+                   
+                    
                 });
         });
     });
+    
 };
 
 export default forms;
