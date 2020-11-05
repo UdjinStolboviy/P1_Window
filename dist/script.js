@@ -18274,10 +18274,10 @@ var images = function images() {
   imgPopup.classList.add('popup');
   workSection.appendChild(imgPopup);
   imgPopup.style.justifyContent = 'center';
-  imgPopup.style.alignContent = 'center';
+  imgPopup.style.alignItems = 'center';
   imgPopup.style.display = 'none';
   imgPopup.appendChild(bigImage);
-  workSection.addEventLisrener('click', function (e) {
+  workSection.addEventListener('click', function (e) {
     e.preventDefault();
     var target = e.target;
 

@@ -7,12 +7,12 @@ const images = () => {
     workSection.appendChild(imgPopup);
 
     imgPopup.style.justifyContent = 'center';
-    imgPopup.style.alignContent = 'center';
+    imgPopup.style.alignItems = 'center';
     imgPopup.style.display = 'none';
 
     imgPopup.appendChild(bigImage);
 
-    workSection.addEventLisrener('click', (e) => {
+    workSection.addEventListener('click', (e) => {
         e.preventDefault();
 
         let target = e.target;
